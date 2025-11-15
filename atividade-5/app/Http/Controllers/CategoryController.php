@@ -13,7 +13,8 @@ class CategoryController extends Controller
         $categories = Category::all();
         return view('categories.index', compact('categories'));
     }
-// Mostra o formulário para criar uma nova categoria
+
+    // Mostra o formulário para criar uma nova categoria
     public function create()
     {
         return view('categories.create');
@@ -63,3 +64,4 @@ class CategoryController extends Controller
         return redirect()->route('categories.index')->with('success', 'Categoria excluída com sucesso.');
     }
 }
+
